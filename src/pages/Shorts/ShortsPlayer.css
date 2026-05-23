@@ -209,26 +209,42 @@
   }
 
   .shorts-player-overlay {
-    padding: 16px 16px 80px;
+    padding: 12px 64px 16px 12px;
+  }
+
+  .shorts-bottom-info {
+    gap: 6px;
   }
 
   .shorts-actions {
     position: absolute;
-    right: 8px;
-    bottom: 80px;
+    right: 4px;
+    bottom: 12px;
+    gap: 12px;
     z-index: 5;
   }
 
   .shorts-action {
     color: #fff;
+    font-size: 11px;
   }
 
   .shorts-action-icon {
+    width: 40px;
+    height: 40px;
     background-color: rgba(255, 255, 255, 0.15);
     color: #fff;
+    font-size: 20px;
   }
 
   .shorts-action:hover .shorts-action-icon {
     background-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .shorts-action-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 4px;
   }
 }
