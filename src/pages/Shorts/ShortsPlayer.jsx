@@ -85,7 +85,7 @@ function ShortsPlayer({ short, isActive }) {
                 {subscribed ? "Obuna bo'lingan" : 'Obuna'}
               </button>
             </div>
-            <p className="shorts-title">{short.title}</p>
+            <p className="shorts-player-title">{short.title}</p>
             <p className="shorts-views-line">{formatViews(short.views)}</p>
           </div>
         </div>
