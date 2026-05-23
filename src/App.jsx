@@ -7,6 +7,7 @@ import MobileDrawer from './components/MobileDrawer/MobileDrawer.jsx'
 import Home from './pages/Home/Home.jsx'
 import Shorts from './pages/Shorts/Shorts.jsx'
 import Subscriptions from './pages/Subscriptions/Subscriptions.jsx'
+import You from './pages/You/You.jsx'
 import './App.css'
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/shorts" element={<Shorts />} />
           <Route path="/subscriptions" element={<Subscriptions />} />
+          <Route path="/you" element={<You />} />
         </Routes>
       </main>
 
