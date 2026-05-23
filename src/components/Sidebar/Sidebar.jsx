@@ -11,16 +11,7 @@ import {
 import {
   MdSubscriptions,
   MdOutlineSlowMotionVideo,
-  MdOutlinePodcasts,
 } from 'react-icons/md'
-import {
-  HiOutlineFire,
-  HiOutlineMusicNote,
-  HiOutlineNewspaper,
-} from 'react-icons/hi'
-import { IoGameControllerOutline } from 'react-icons/io5'
-import { BiCameraMovie } from 'react-icons/bi'
-import { FaYoutube } from 'react-icons/fa'
 import './Sidebar.css'
 
 const mainItems = [
@@ -32,16 +23,6 @@ const mainItems = [
 const youItems = [
   { icon: <FiUser />, label: 'Siz', to: '/you' },
   { icon: <FiClock />, label: 'Tomosha tarixi', to: '/history' },
-]
-
-const exploreItems = [
-  { icon: <HiOutlineFire />, label: 'Trendlar' },
-  { icon: <HiOutlineMusicNote />, label: 'Musiqa' },
-  { icon: <BiCameraMovie />, label: 'Filmlar' },
-  { icon: <FaYoutube />, label: 'Jonli' },
-  { icon: <IoGameControllerOutline />, label: 'Gaming' },
-  { icon: <HiOutlineNewspaper />, label: 'Yangiliklar' },
-  { icon: <MdOutlinePodcasts />, label: 'Podkastlar' },
 ]
 
 const settingsItems = [
@@ -95,13 +76,6 @@ function Sidebar({ open }) {
       <section className="sidebar-section">
         <h3 className="sidebar-title">Siz</h3>
         {youItems.map((item) => (
-          <SidebarItem key={item.label} {...item} />
-        ))}
-      </section>
-
-      <section className="sidebar-section">
-        <h3 className="sidebar-title">Tanishuv</h3>
-        {exploreItems.map((item) => (
           <SidebarItem key={item.label} {...item} />
         ))}
       </section>
