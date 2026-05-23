@@ -8,6 +8,7 @@ import Home from './pages/Home/Home.jsx'
 import Shorts from './pages/Shorts/Shorts.jsx'
 import Subscriptions from './pages/Subscriptions/Subscriptions.jsx'
 import You from './pages/You/You.jsx'
+import History from './pages/History/History.jsx'
 import Login from './pages/Auth/Login.jsx'
 import Register from './pages/Auth/Register.jsx'
 import './App.css'
@@ -43,6 +44,7 @@ function App() {
           <Route path="/shorts" element={<Shorts />} />
           <Route path="/subscriptions" element={<Subscriptions />} />
           <Route path="/you" element={<You />} />
+          <Route path="/history" element={<History />} />
         </Routes>
       </main>
 
