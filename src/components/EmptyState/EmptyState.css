@@ -39,17 +39,17 @@
   margin-top: 12px;
   height: 36px;
   padding: 0 14px;
-  border: 1px solid #c6c6c6;
+  border: 1px solid var(--border-strong);
   border-radius: 18px;
   background-color: var(--bg);
-  color: #065fd4;
+  color: var(--blue);
   font-weight: 500;
   font-size: 14px;
   transition: background-color 0.15s ease;
 }
 
 .empty-state-btn:hover {
-  background-color: #def1ff;
+  background-color: var(--bg-hover);
 }
 
 .empty-state-btn svg {

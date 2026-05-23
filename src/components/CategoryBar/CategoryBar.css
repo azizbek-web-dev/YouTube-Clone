@@ -37,7 +37,7 @@
 }
 
 .category-chip:hover {
-  background-color: #e5e5e5;
+  background-color: var(--border);
 }
 
 .category-chip.active {

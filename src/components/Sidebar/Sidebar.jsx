@@ -26,7 +26,7 @@ const youItems = [
 ]
 
 const settingsItems = [
-  { icon: <FiSettings />, label: 'Sozlamalar' },
+  { icon: <FiSettings />, label: 'Sozlamalar', to: '/settings' },
   { icon: <FiFlag />, label: 'Shikoyatlar tarixi' },
   { icon: <FiHelpCircle />, label: 'Yordam' },
   { icon: <FiMessageSquare />, label: 'Fikr bildirish' },

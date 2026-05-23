@@ -18,7 +18,7 @@
 }
 
 .history-learn-more {
-  color: #065fd4;
+  color: var(--blue);
   font-weight: 500;
 }
 

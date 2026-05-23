@@ -9,6 +9,7 @@ import Shorts from './pages/Shorts/Shorts.jsx'
 import Subscriptions from './pages/Subscriptions/Subscriptions.jsx'
 import You from './pages/You/You.jsx'
 import History from './pages/History/History.jsx'
+import Settings from './pages/Settings/Settings.jsx'
 import Login from './pages/Auth/Login.jsx'
 import Register from './pages/Auth/Register.jsx'
 import './App.css'
@@ -45,6 +46,7 @@ function App() {
           <Route path="/subscriptions" element={<Subscriptions />} />
           <Route path="/you" element={<You />} />
           <Route path="/history" element={<History />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </main>
 

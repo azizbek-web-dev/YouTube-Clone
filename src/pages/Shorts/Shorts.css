@@ -46,7 +46,7 @@
 }
 
 .shorts-nav-btn:hover:not(:disabled) {
-  background-color: #e0e0e0;
+  background-color: var(--bg-hover);
 }
 
 .shorts-nav-btn:disabled {

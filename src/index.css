@@ -4,15 +4,36 @@
   --bg-hover: #f2f2f2;
   --bg-chip: #f2f2f2;
   --bg-chip-active: #0f0f0f;
+  --bg-elevated: #ffffff;
   --text: #0f0f0f;
   --text-secondary: #606060;
   --text-inverse: #ffffff;
   --border: #e5e5e5;
+  --border-strong: #d3d3d3;
   --red: #ff0000;
+  --blue: #065fd4;
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.08);
   --header-height: 56px;
   --sidebar-width: 240px;
   --sidebar-mini-width: 72px;
   --mobile-bottom-nav-height: 56px;
+}
+
+[data-theme='dark'] {
+  --bg: #0f0f0f;
+  --bg-secondary: #1f1f1f;
+  --bg-hover: #272727;
+  --bg-chip: #272727;
+  --bg-chip-active: #ffffff;
+  --bg-elevated: #212121;
+  --text: #f1f1f1;
+  --text-secondary: #aaaaaa;
+  --text-inverse: #0f0f0f;
+  --border: #303030;
+  --border-strong: #3f3f3f;
+  --red: #ff0033;
+  --blue: #3ea6ff;
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.6);
 }
 
 * {
@@ -40,6 +61,12 @@ button {
   border: none;
   background: transparent;
   color: inherit;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
 }
 
 ul {
