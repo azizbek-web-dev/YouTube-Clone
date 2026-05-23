@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar/Sidebar.jsx'
 import MobileNav from './components/MobileNav/MobileNav.jsx'
 import MobileDrawer from './components/MobileDrawer/MobileDrawer.jsx'
 import Home from './pages/Home/Home.jsx'
+import Shorts from './pages/Shorts/Shorts.jsx'
 import './App.css'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <main className={`app-main ${sidebarOpen ? 'with-sidebar' : 'with-mini'}`}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/shorts" element={<Shorts />} />
         </Routes>
       </main>
 
