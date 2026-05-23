@@ -33,7 +33,7 @@
 }
 
 .empty-state-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 6px;
   margin-top: 12px;
