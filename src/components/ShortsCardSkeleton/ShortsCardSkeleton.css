@@ -1,0 +1,24 @@
+.shorts-card-skel {
+  width: 100%;
+}
+
+.skel-shorts-thumb {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+}
+
+.shorts-card-skel-meta {
+  padding: 8px 4px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.shorts-card-skel-meta .skel-line-1 {
+  width: 100%;
+}
+
+.shorts-card-skel-meta .skel-line-2 {
+  width: 60%;
+}
