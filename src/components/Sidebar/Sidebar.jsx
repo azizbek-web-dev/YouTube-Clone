@@ -3,7 +3,6 @@ import {
   FiHome,
   FiUser,
   FiClock,
-  FiThumbsUp,
   FiFlag,
   FiSettings,
   FiHelpCircle,
@@ -12,7 +11,6 @@ import {
 import {
   MdSubscriptions,
   MdOutlineSlowMotionVideo,
-  MdOutlineVideoLibrary,
   MdOutlinePodcasts,
 } from 'react-icons/md'
 import {
@@ -34,8 +32,6 @@ const mainItems = [
 const youItems = [
   { icon: <FiUser />, label: 'Siz', to: '/you' },
   { icon: <FiClock />, label: 'Tomosha tarixi', to: '/history' },
-  { icon: <MdOutlineVideoLibrary />, label: "Pleyrist'lar", to: '/playlists' },
-  { icon: <FiThumbsUp />, label: 'Yoqtirilgan videolar', to: '/liked' },
 ]
 
 const exploreItems = [
