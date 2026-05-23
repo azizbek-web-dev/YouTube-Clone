@@ -2,18 +2,33 @@
   padding: 0 24px 24px;
 }
 
-.home-placeholder {
-  padding: 24px 0;
-  color: var(--text-secondary);
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  row-gap: 40px;
+  margin-top: 16px;
 }
 
-.home-placeholder p {
-  margin-top: 8px;
+.home-empty {
+  padding: 32px 0;
+  color: var(--text-secondary);
   font-size: 14px;
+}
+
+@media (min-width: 1400px) {
+  .video-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
   .home {
     padding: 0 12px 12px;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
   }
 }
