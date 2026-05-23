@@ -37,7 +37,7 @@ function Home() {
             ))}
           </div>
 
-          {showShorts && <ShortsRow shorts={shorts} />}
+          {showShorts && <ShortsRow shorts={shorts.slice(0, 5)} />}
 
           {rest.length > 0 && (
             <div className="video-grid">
