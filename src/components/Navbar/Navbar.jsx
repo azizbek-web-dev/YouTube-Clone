@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useRef, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import {
   FiMenu,
   FiSearch,
@@ -9,21 +9,43 @@ import {
   FiMoreVertical,
   FiUser,
   FiArrowLeft,
+  FiLogOut,
 } from 'react-icons/fi'
 import { FaYoutube } from 'react-icons/fa'
+import { useAuth } from '../../contexts/AuthContext.jsx'
 import './Navbar.css'
 
 function Navbar({ onToggleSidebar, onOpenDrawer }) {
+  const navigate = useNavigate()
+  const { user, logout } = useAuth()
   const [query, setQuery] = useState('')
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const menuRef = useRef(null)
+
+  useEffect(() => {
+    if (!menuOpen) return
+    const handler = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setMenuOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [menuOpen])
 
   const onSubmit = (e) => {
     e.preventDefault()
   }
 
+  const onLogout = () => {
+    logout()
+    setMenuOpen(false)
+    navigate('/')
+  }
+
   return (
     <header className="navbar">
-      {/* Mobile search overlay */}
       {mobileSearchOpen && (
         <div className="navbar-mobile-search">
           <button
@@ -94,19 +116,58 @@ function Navbar({ onToggleSidebar, onOpenDrawer }) {
         >
           <FiSearch />
         </button>
-        <button className="icon-btn hide-mobile" aria-label="Create">
-          <FiVideo />
-        </button>
-        <button className="icon-btn hide-mobile" aria-label="Notifications">
-          <FiBell />
-        </button>
-        <button className="icon-btn" aria-label="More">
-          <FiMoreVertical />
-        </button>
-        <button className="sign-in-btn">
-          <FiUser />
-          <span>Kirish</span>
-        </button>
+        {user ? (
+          <>
+            <button className="icon-btn hide-mobile" aria-label="Create">
+              <FiVideo />
+            </button>
+            <button className="icon-btn hide-mobile" aria-label="Notifications">
+              <FiBell />
+            </button>
+            <div className="navbar-user" ref={menuRef}>
+              <button
+                className="navbar-user-avatar"
+                style={{ backgroundColor: user.color }}
+                onClick={() => setMenuOpen((v) => !v)}
+                aria-label="Account menu"
+              >
+                {user.name.charAt(0).toUpperCase()}
+              </button>
+              {menuOpen && (
+                <div className="navbar-user-menu">
+                  <div className="navbar-user-info">
+                    <div
+                      className="navbar-user-info-avatar"
+                      style={{ backgroundColor: user.color }}
+                    >
+                      {user.name.charAt(0).toUpperCase()}
+                    </div>
+                    <div>
+                      <div className="navbar-user-info-name">{user.name}</div>
+                      <div className="navbar-user-info-handle">
+                        {user.handle}
+                      </div>
+                    </div>
+                  </div>
+                  <button className="navbar-user-menu-item" onClick={onLogout}>
+                    <FiLogOut />
+                    <span>Hisobdan chiqish</span>
+                  </button>
+                </div>
+              )}
+            </div>
+          </>
+        ) : (
+          <>
+            <button className="icon-btn" aria-label="More">
+              <FiMoreVertical />
+            </button>
+            <Link to="/login" className="sign-in-btn">
+              <FiUser />
+              <span>Kirish</span>
+            </Link>
+          </>
+        )}
       </div>
     </header>
   )
