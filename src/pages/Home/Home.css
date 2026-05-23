@@ -1,0 +1,19 @@
+.home {
+  padding: 0 24px 24px;
+}
+
+.home-placeholder {
+  padding: 24px 0;
+  color: var(--text-secondary);
+}
+
+.home-placeholder p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 0 12px 12px;
+  }
+}
