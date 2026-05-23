@@ -6,6 +6,7 @@ import MobileNav from './components/MobileNav/MobileNav.jsx'
 import MobileDrawer from './components/MobileDrawer/MobileDrawer.jsx'
 import Home from './pages/Home/Home.jsx'
 import Shorts from './pages/Shorts/Shorts.jsx'
+import Subscriptions from './pages/Subscriptions/Subscriptions.jsx'
 import './App.css'
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shorts" element={<Shorts />} />
+          <Route path="/subscriptions" element={<Subscriptions />} />
         </Routes>
       </main>
 
