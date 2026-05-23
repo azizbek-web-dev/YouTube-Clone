@@ -1,0 +1,37 @@
+.app {
+  min-height: 100vh;
+}
+
+.app-main {
+  padding-top: var(--header-height);
+  min-height: 100vh;
+  transition: padding-left 0.15s ease;
+}
+
+.app-main.with-sidebar {
+  padding-left: var(--sidebar-width);
+}
+
+.app-main.with-mini {
+  padding-left: var(--sidebar-mini-width);
+}
+
+.app-placeholder {
+  padding: 24px;
+  color: var(--text-secondary);
+}
+
+.app-placeholder h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .app-main.with-sidebar,
+  .app-main.with-mini {
+    padding-left: 0;
+    padding-bottom: var(--mobile-bottom-nav-height);
+  }
+}
