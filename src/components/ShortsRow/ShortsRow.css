@@ -25,19 +25,25 @@
 
 .shorts-row-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 8px;
 }
 
-@media (max-width: 1400px) {
+@media (min-width: 1500px) {
   .shorts-row-list {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
 @media (max-width: 1100px) {
   .shorts-row-list {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .shorts-row-list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
